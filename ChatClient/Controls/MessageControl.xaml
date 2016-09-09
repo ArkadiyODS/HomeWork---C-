@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="ChatClient.Controls.MessageControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Margin="0" Width="500"> 
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Name="leftMessage" Visibility="Hidden" Grid.Column="0">
+            <Label Margin="10,0,0,0"  Name="leftDate" Foreground="DarkTurquoise">Date</Label>
+            <Border  Margin="10" Padding="10" CornerRadius="10" Background="DarkTurquoise"  BorderBrush="DarkTurquoise" BorderThickness="2" >
+
+                <TextBlock TextWrapping="Wrap" Foreground="White"  Name="leftSide">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Maecenas eget eleifend est. Pellentesque nec nunc neque
+                </TextBlock>
+            </Border>
+        </StackPanel>
+        <StackPanel Name="rightMessage"  Visibility="Hidden" Grid.Column="1">
+            <Label Margin="0,0,10,0" Name="rightDate" HorizontalAlignment="Right" Foreground="DeepSkyBlue">Date</Label>
+            <Border Margin="10" Padding="10" CornerRadius="10" Background="DeepSkyBlue"  BorderBrush="DeepSkyBlue" BorderThickness="2">
+                <TextBlock TextWrapping="Wrap" Foreground="White"  Name="rightSide" >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Maecenas eget eleifend est. Pellentesque nec nunc neque
+                </TextBlock>
+            </Border>
+        </StackPanel>
+    </Grid>
+</UserControl>
